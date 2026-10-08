@@ -43,4 +43,4 @@ src/data/content.json holds preserved source content and links; src/data/site.ts
 
 The design takes information-hierarchy inspiration from the research and a few AstroWind patterns. Its MIT notice is retained in docs/AstroWind-LICENSE.md. PLF branding, photographs, documents and source text remain subject to their original rights; that MIT notice does not license PLF material.
 
-The GitHub source ZIP contains this complete project without dependencies or generated build output. Extract it, then run the commands above.
+Clone this repository and run the commands above. The obsolete source ZIP is removed from the working tree so the editable source can be reviewed directly. The safeguarding PDF retains its page content, with author/application metadata removed in the privacy cleanup.
