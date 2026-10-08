@@ -1,0 +1,8 @@
+---
+interface Props { paragraphs: string[]; }
+const {paragraphs}=Astro.props;
+---
+<div class="prose">{paragraphs.map((paragraph)=>{
+const heading=paragraph.length<100&&!paragraph.includes('\n')&&/^[A-Z‘’'0-9 &,–—+()\-]+$/.test(paragraph)&&paragraph.length>4;
+return heading?<h2>{paragraph.toLowerCase().replace(/^./,c=>c.toUpperCase())}</h2>:<p>{paragraph}</p>;
+})}</div>

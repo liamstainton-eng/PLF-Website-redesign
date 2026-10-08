@@ -1,0 +1,502 @@
+{
+  "logo": {
+    "key": "logo",
+    "width": 1000,
+    "height": 720,
+    "src": "/images/logo-1000.webp",
+    "srcset": "/images/logo-480.webp 480w, /images/logo-800.webp 800w, /images/logo-1000.webp 1000w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2020/09/PLF-Logomark.png",
+    "sourcePath": "images/PLF-Logomark--49ec81ccdcc2.png",
+    "sha256": "49ec81ccdcc2804242caee8a0234e1ff89adb64f5a12bdf8c63b52ec8de6b41a"
+  },
+  "hero": {
+    "key": "hero",
+    "width": 1600,
+    "height": 1200,
+    "src": "/images/hero-1600.webp",
+    "srcset": "/images/hero-480.webp 480w, /images/hero-800.webp 800w, /images/hero-1280.webp 1280w, /images/hero-1600.webp 1600w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2020/09/The-PLF-LEJOG-Team-at-Claire-House-Wirral.jpg",
+    "sourcePath": "images/The-PLF-LEJOG-Team-at-Claire-House-Wirral--8473da8ed4e7.jpg",
+    "sha256": "8473da8ed4e7f6bc9594b084fdf4f28753eb91007c3f071b9a9dbc23736531eb"
+  },
+  "cycling": {
+    "key": "cycling",
+    "width": 1600,
+    "height": 1200,
+    "src": "/images/cycling-1600.webp",
+    "srcset": "/images/cycling-480.webp 480w, /images/cycling-800.webp 800w, /images/cycling-1280.webp 1280w, /images/cycling-1600.webp 1600w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2020/09/Cycling-club-pic.jpeg",
+    "sourcePath": "images/Cycling-club-pic--cef9904ea1b5.jpg",
+    "sha256": "cef9904ea1b504b5dc24ea243bd8c4d87fa93619ddcc50bfa78d2b6af1669754"
+  },
+  "swimming": {
+    "key": "swimming",
+    "width": 1600,
+    "height": 777,
+    "src": "/images/swimming-1600.webp",
+    "srcset": "/images/swimming-480.webp 480w, /images/swimming-800.webp 800w, /images/swimming-1280.webp 1280w, /images/swimming-1600.webp 1600w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2020/09/Open-swimming-pic.jpeg",
+    "sourcePath": "images/Open-swimming-pic--9f315812cb77.jpg",
+    "sha256": "9f315812cb77bfb6deba8fc25e4f2b64a9092a94ceca1d6e6c79df0fce0ba554"
+  },
+  "running": {
+    "key": "running",
+    "width": 600,
+    "height": 350,
+    "src": "/images/running-600.webp",
+    "srcset": "/images/running-480.webp 480w, /images/running-600.webp 600w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2022/04/running-club.jpg",
+    "sourcePath": "images/running-club--096716d3688b.jpg",
+    "sha256": "096716d3688ba070816a8759c7239ccbe56371ec02153b8e76116de110c3e547"
+  },
+  "paul": {
+    "key": "paul",
+    "width": 1890,
+    "height": 1587,
+    "src": "/images/paul-1600.webp",
+    "srcset": "/images/paul-480.webp 480w, /images/paul-800.webp 800w, /images/paul-1280.webp 1280w, /images/paul-1600.webp 1600w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2020/08/PLF-Home_0009_IMG10.jpg",
+    "sourcePath": "images/PLF-Home_0009_IMG10--1339a5595b3f.jpg",
+    "sha256": "1339a5595b3fdd3a127dab3b67600a7ba5b3cc29504da1aa9b6177631cc4bebb"
+  },
+  "liverpool": {
+    "key": "liverpool",
+    "width": 912,
+    "height": 912,
+    "src": "/images/liverpool-912.webp",
+    "srcset": "/images/liverpool-480.webp 480w, /images/liverpool-800.webp 800w, /images/liverpool-912.webp 912w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2025/10/liv-img-3.jpg",
+    "sourcePath": "images/liv-img-3--48ef6219ebb7.jpg",
+    "sha256": "48ef6219ebb7511ac689440e02767677710095c6e8d0622f204dc263703449ba"
+  },
+  "walking": {
+    "key": "walking",
+    "width": 2048,
+    "height": 1536,
+    "src": "/images/walking-1600.webp",
+    "srcset": "/images/walking-480.webp 480w, /images/walking-800.webp 800w, /images/walking-1280.webp 1280w, /images/walking-1600.webp 1600w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2019/10/snowdon-2.jpeg",
+    "sourcePath": "images/snowdon-2--4713032d7f08.jpg",
+    "sha256": "4713032d7f0890d97dd1a2a92fef39739e979e428f9691563585a1f77d88b2e3"
+  },
+  "PLF-Home_0009_IMG10--1339a5595b3f": {
+    "key": "PLF-Home_0009_IMG10--1339a5595b3f",
+    "width": 1890,
+    "height": 1587,
+    "src": "/images/PLF-Home_0009_IMG10--1339a5595b3f-1600.webp",
+    "srcset": "/images/PLF-Home_0009_IMG10--1339a5595b3f-480.webp 480w, /images/PLF-Home_0009_IMG10--1339a5595b3f-800.webp 800w, /images/PLF-Home_0009_IMG10--1339a5595b3f-1280.webp 1280w, /images/PLF-Home_0009_IMG10--1339a5595b3f-1600.webp 1600w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2020/08/PLF-Home_0009_IMG10.jpg",
+    "sourcePath": "images/PLF-Home_0009_IMG10--1339a5595b3f.jpg",
+    "sha256": "1339a5595b3fdd3a127dab3b67600a7ba5b3cc29504da1aa9b6177631cc4bebb"
+  },
+  "PLF-Home_0008_IMG9--7f15282d9559": {
+    "key": "PLF-Home_0008_IMG9--7f15282d9559",
+    "width": 1890,
+    "height": 1587,
+    "src": "/images/PLF-Home_0008_IMG9--7f15282d9559-1600.webp",
+    "srcset": "/images/PLF-Home_0008_IMG9--7f15282d9559-480.webp 480w, /images/PLF-Home_0008_IMG9--7f15282d9559-800.webp 800w, /images/PLF-Home_0008_IMG9--7f15282d9559-1280.webp 1280w, /images/PLF-Home_0008_IMG9--7f15282d9559-1600.webp 1600w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2020/08/PLF-Home_0008_IMG9.jpg",
+    "sourcePath": "images/PLF-Home_0008_IMG9--7f15282d9559.jpg",
+    "sha256": "7f15282d955984a3e6cb6ad263af23d27240f9ea63f9fb53574d5d7726a2dcca"
+  },
+  "PartnersMob2--a843824a92d1": {
+    "key": "PartnersMob2--a843824a92d1",
+    "width": 844,
+    "height": 2042,
+    "src": "/images/PartnersMob2--a843824a92d1-844.webp",
+    "srcset": "/images/PartnersMob2--a843824a92d1-480.webp 480w, /images/PartnersMob2--a843824a92d1-800.webp 800w, /images/PartnersMob2--a843824a92d1-844.webp 844w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2026/01/PartnersMob2.png",
+    "sourcePath": "images/PartnersMob2--a843824a92d1.png",
+    "sha256": "a843824a92d1b3d2068b6dc0350cbce2b890841201d5119a1550dd67a74cc2ef"
+  },
+  "undraw_Interview_re_e5jn--0abbbe77d0bf": {
+    "key": "undraw_Interview_re_e5jn--0abbbe77d0bf",
+    "width": 1073,
+    "height": 793,
+    "src": "/images/undraw_Interview_re_e5jn--0abbbe77d0bf-1073.webp",
+    "srcset": "/images/undraw_Interview_re_e5jn--0abbbe77d0bf-480.webp 480w, /images/undraw_Interview_re_e5jn--0abbbe77d0bf-800.webp 800w, /images/undraw_Interview_re_e5jn--0abbbe77d0bf-1073.webp 1073w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2022/04/undraw_Interview_re_e5jn.png",
+    "sourcePath": "images/undraw_Interview_re_e5jn--0abbbe77d0bf.png",
+    "sha256": "0abbbe77d0bfc643923be9c47f4e6d1c9ff08ee725559cc69e96c0c8bbd4293c"
+  },
+  "undraw_stand_out_1oag--ab2ead56df21": {
+    "key": "undraw_stand_out_1oag--ab2ead56df21",
+    "width": 1199,
+    "height": 846,
+    "src": "/images/undraw_stand_out_1oag--ab2ead56df21-1199.webp",
+    "srcset": "/images/undraw_stand_out_1oag--ab2ead56df21-480.webp 480w, /images/undraw_stand_out_1oag--ab2ead56df21-800.webp 800w, /images/undraw_stand_out_1oag--ab2ead56df21-1199.webp 1199w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2022/04/undraw_stand_out_1oag.png",
+    "sourcePath": "images/undraw_stand_out_1oag--ab2ead56df21.png",
+    "sha256": "ab2ead56df214b56b0e9863be17b4e3a391e0da6c21143b6e976ec585c4f4d7a"
+  },
+  "LGBTQ-Logo--42676fbc3194": {
+    "key": "LGBTQ-Logo--42676fbc3194",
+    "width": 1600,
+    "height": 1131,
+    "src": "/images/LGBTQ-Logo--42676fbc3194-1600.webp",
+    "srcset": "/images/LGBTQ-Logo--42676fbc3194-480.webp 480w, /images/LGBTQ-Logo--42676fbc3194-800.webp 800w, /images/LGBTQ-Logo--42676fbc3194-1280.webp 1280w, /images/LGBTQ-Logo--42676fbc3194-1600.webp 1600w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2024/01/LGBTQ-Logo.jpg",
+    "sourcePath": "images/LGBTQ-Logo--42676fbc3194.jpg",
+    "sha256": "42676fbc319495ee9c93afc874e48f5c4823e8590e1f897567602762b47ae59e"
+  },
+  "liv-img-1--2c13257a1c4a": {
+    "key": "liv-img-1--2c13257a1c4a",
+    "width": 912,
+    "height": 912,
+    "src": "/images/liv-img-1--2c13257a1c4a-912.webp",
+    "srcset": "/images/liv-img-1--2c13257a1c4a-480.webp 480w, /images/liv-img-1--2c13257a1c4a-800.webp 800w, /images/liv-img-1--2c13257a1c4a-912.webp 912w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2025/10/liv-img-1.jpg",
+    "sourcePath": "images/liv-img-1--2c13257a1c4a.jpg",
+    "sha256": "2c13257a1c4a1cf286ac58518adb7d93c132e700213976d0b0ea55f15e4e00b2"
+  },
+  "Cycling-club-Logo--042ce4073162": {
+    "key": "Cycling-club-Logo--042ce4073162",
+    "width": 800,
+    "height": 800,
+    "src": "/images/Cycling-club-Logo--042ce4073162-800.webp",
+    "srcset": "/images/Cycling-club-Logo--042ce4073162-480.webp 480w, /images/Cycling-club-Logo--042ce4073162-800.webp 800w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2020/08/Cycling-club-Logo.png",
+    "sourcePath": "images/Cycling-club-Logo--042ce4073162.png",
+    "sha256": "042ce40731620c8a17b2911e61ac84c67a30fd37e9661888878e58952a60fcc3"
+  },
+  "Swimming-Club-Logo--aa4ab15489ac": {
+    "key": "Swimming-Club-Logo--aa4ab15489ac",
+    "width": 800,
+    "height": 800,
+    "src": "/images/Swimming-Club-Logo--aa4ab15489ac-800.webp",
+    "srcset": "/images/Swimming-Club-Logo--aa4ab15489ac-480.webp 480w, /images/Swimming-Club-Logo--aa4ab15489ac-800.webp 800w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2020/08/Swimming-Club-Logo.png",
+    "sourcePath": "images/Swimming-Club-Logo--aa4ab15489ac.png",
+    "sha256": "aa4ab15489ac61d9c5f39c4173ccb7a886ddba1f151695bf9de172177ff1cd58"
+  },
+  "snowdon-2-1024x768--3a1212a24872": {
+    "key": "snowdon-2-1024x768--3a1212a24872",
+    "width": 1024,
+    "height": 768,
+    "src": "/images/snowdon-2-1024x768--3a1212a24872-1024.webp",
+    "srcset": "/images/snowdon-2-1024x768--3a1212a24872-480.webp 480w, /images/snowdon-2-1024x768--3a1212a24872-800.webp 800w, /images/snowdon-2-1024x768--3a1212a24872-1024.webp 1024w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2019/10/snowdon-2-1024x768.jpeg",
+    "sourcePath": "images/snowdon-2-1024x768--3a1212a24872.jpg",
+    "sha256": "3a1212a24872fb3c98e4460369a56593f950c7daaf6908cdb03f212c22dc3f6f"
+  },
+  "bubs-1024x768--f3b9aaab30dd": {
+    "key": "bubs-1024x768--f3b9aaab30dd",
+    "width": 1024,
+    "height": 768,
+    "src": "/images/bubs-1024x768--f3b9aaab30dd-1024.webp",
+    "srcset": "/images/bubs-1024x768--f3b9aaab30dd-480.webp 480w, /images/bubs-1024x768--f3b9aaab30dd-800.webp 800w, /images/bubs-1024x768--f3b9aaab30dd-1024.webp 1024w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2019/10/bubs-1024x768.jpg",
+    "sourcePath": "images/bubs-1024x768--f3b9aaab30dd.jpg",
+    "sha256": "f3b9aaab30dd45c92c809aff643bae85fa995e17be08ae315484dbfa8a29f102"
+  },
+  "chetser-1024x473--7cdc5f744903": {
+    "key": "chetser-1024x473--7cdc5f744903",
+    "width": 1024,
+    "height": 473,
+    "src": "/images/chetser-1024x473--7cdc5f744903-1024.webp",
+    "srcset": "/images/chetser-1024x473--7cdc5f744903-480.webp 480w, /images/chetser-1024x473--7cdc5f744903-800.webp 800w, /images/chetser-1024x473--7cdc5f744903-1024.webp 1024w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2019/07/chetser-1024x473.png",
+    "sourcePath": "images/chetser-1024x473--7cdc5f744903.png",
+    "sha256": "7cdc5f744903e5e83f29e51d34649ede6ad0284b7370ef8d93af909ced6f90f1"
+  },
+  "ferry-1024x768--252f8341f838": {
+    "key": "ferry-1024x768--252f8341f838",
+    "width": 1024,
+    "height": 768,
+    "src": "/images/ferry-1024x768--252f8341f838-1024.webp",
+    "srcset": "/images/ferry-1024x768--252f8341f838-480.webp 480w, /images/ferry-1024x768--252f8341f838-800.webp 800w, /images/ferry-1024x768--252f8341f838-1024.webp 1024w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2019/07/ferry-1024x768.jpg",
+    "sourcePath": "images/ferry-1024x768--252f8341f838.jpg",
+    "sha256": "252f8341f83804f1572b932956d937e85eeaf01035e2d2cbf7d33033152396cb"
+  },
+  "Facetune_10-03-2019-12-21-25-768x1024--612af12047cb": {
+    "key": "Facetune_10-03-2019-12-21-25-768x1024--612af12047cb",
+    "width": 768,
+    "height": 1024,
+    "src": "/images/Facetune_10-03-2019-12-21-25-768x1024--612af12047cb-768.webp",
+    "srcset": "/images/Facetune_10-03-2019-12-21-25-768x1024--612af12047cb-480.webp 480w, /images/Facetune_10-03-2019-12-21-25-768x1024--612af12047cb-768.webp 768w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2019/03/Facetune_10-03-2019-12-21-25-768x1024.jpg",
+    "sourcePath": "images/Facetune_10-03-2019-12-21-25-768x1024--612af12047cb.jpg",
+    "sha256": "612af12047cb1894b50514aacf1af6955ff78e92e06a1b6a30d77d882c70d247"
+  },
+  "liv-img-2--64347d4b600d": {
+    "key": "liv-img-2--64347d4b600d",
+    "width": 912,
+    "height": 912,
+    "src": "/images/liv-img-2--64347d4b600d-912.webp",
+    "srcset": "/images/liv-img-2--64347d4b600d-480.webp 480w, /images/liv-img-2--64347d4b600d-800.webp 800w, /images/liv-img-2--64347d4b600d-912.webp 912w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2025/10/liv-img-2.jpg",
+    "sourcePath": "images/liv-img-2--64347d4b600d.jpg",
+    "sha256": "64347d4b600d510229d85a62071c56c50b37e8456e62296482a74bfa9fe15e86"
+  },
+  "claire-house-1024x473--839564dbb522": {
+    "key": "claire-house-1024x473--839564dbb522",
+    "width": 1024,
+    "height": 473,
+    "src": "/images/claire-house-1024x473--839564dbb522-1024.webp",
+    "srcset": "/images/claire-house-1024x473--839564dbb522-480.webp 480w, /images/claire-house-1024x473--839564dbb522-800.webp 800w, /images/claire-house-1024x473--839564dbb522-1024.webp 1024w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2019/10/claire-house-1024x473.png",
+    "sourcePath": "images/claire-house-1024x473--839564dbb522.png",
+    "sha256": "839564dbb5227b37f41f2f89eb89009f23faf09d1c35de0629e4a7242fd19337"
+  },
+  "lejog-2-1024x768--0654d824b741": {
+    "key": "lejog-2-1024x768--0654d824b741",
+    "width": 1024,
+    "height": 768,
+    "src": "/images/lejog-2-1024x768--0654d824b741-1024.webp",
+    "srcset": "/images/lejog-2-1024x768--0654d824b741-480.webp 480w, /images/lejog-2-1024x768--0654d824b741-800.webp 800w, /images/lejog-2-1024x768--0654d824b741-1024.webp 1024w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2019/10/lejog-2-1024x768.jpg",
+    "sourcePath": "images/lejog-2-1024x768--0654d824b741.jpg",
+    "sha256": "0654d824b7415e75f2e3eaffde201ca8576b298a3130e2a637d79e4f105f0aeb"
+  },
+  "Summer-BBQ-flyer--b7217a669d44": {
+    "key": "Summer-BBQ-flyer--b7217a669d44",
+    "width": 1449,
+    "height": 2048,
+    "src": "/images/Summer-BBQ-flyer--b7217a669d44-1449.webp",
+    "srcset": "/images/Summer-BBQ-flyer--b7217a669d44-480.webp 480w, /images/Summer-BBQ-flyer--b7217a669d44-800.webp 800w, /images/Summer-BBQ-flyer--b7217a669d44-1280.webp 1280w, /images/Summer-BBQ-flyer--b7217a669d44-1449.webp 1449w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2026/06/Summer-BBQ-flyer.jpg",
+    "sourcePath": "images/Summer-BBQ-flyer--b7217a669d44.jpg",
+    "sha256": "b7217a669d44f588f567fe921b55efb6e730851b70830c1e0d13a1829230490e"
+  },
+  "Love2run-Flyer-General--8fdaf86055f9": {
+    "key": "Love2run-Flyer-General--8fdaf86055f9",
+    "width": 1409,
+    "height": 2000,
+    "src": "/images/Love2run-Flyer-General--8fdaf86055f9-1409.webp",
+    "srcset": "/images/Love2run-Flyer-General--8fdaf86055f9-480.webp 480w, /images/Love2run-Flyer-General--8fdaf86055f9-800.webp 800w, /images/Love2run-Flyer-General--8fdaf86055f9-1280.webp 1280w, /images/Love2run-Flyer-General--8fdaf86055f9-1409.webp 1409w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2025/12/Love2run-Flyer-General.png",
+    "sourcePath": "images/Love2run-Flyer-General--8fdaf86055f9.png",
+    "sha256": "8fdaf86055f98161b6a2611f2f33f0802d13b506f35b0dc1a1b4311ebc9fa6d2"
+  },
+  "motm1-1024x768--2d8e1e02a8d3": {
+    "key": "motm1-1024x768--2d8e1e02a8d3",
+    "width": 1024,
+    "height": 768,
+    "src": "/images/motm1-1024x768--2d8e1e02a8d3-1024.webp",
+    "srcset": "/images/motm1-1024x768--2d8e1e02a8d3-480.webp 480w, /images/motm1-1024x768--2d8e1e02a8d3-800.webp 800w, /images/motm1-1024x768--2d8e1e02a8d3-1024.webp 1024w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2019/03/motm1-1024x768.jpg",
+    "sourcePath": "images/motm1-1024x768--2d8e1e02a8d3.jpg",
+    "sha256": "2d8e1e02a8d37e1d69d85e38f4f104fd0505b1974e7137e80d9db8c58c1f0252"
+  },
+  "motm3-1024x768--d1ad7ea24038": {
+    "key": "motm3-1024x768--d1ad7ea24038",
+    "width": 1024,
+    "height": 768,
+    "src": "/images/motm3-1024x768--d1ad7ea24038-1024.webp",
+    "srcset": "/images/motm3-1024x768--d1ad7ea24038-480.webp 480w, /images/motm3-1024x768--d1ad7ea24038-800.webp 800w, /images/motm3-1024x768--d1ad7ea24038-1024.webp 1024w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2019/03/motm3-1024x768.jpg",
+    "sourcePath": "images/motm3-1024x768--d1ad7ea24038.jpg",
+    "sha256": "d1ad7ea24038dd28d32ffcd41aa4e0087c062fc95ea6e6237d4636f3ec57e4d6"
+  },
+  "IMG_4431--a0b30bd61f31": {
+    "key": "IMG_4431--a0b30bd61f31",
+    "width": 750,
+    "height": 1334,
+    "src": "/images/IMG_4431--a0b30bd61f31-750.webp",
+    "srcset": "/images/IMG_4431--a0b30bd61f31-480.webp 480w, /images/IMG_4431--a0b30bd61f31-750.webp 750w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2018/10/IMG_4431.png",
+    "sourcePath": "images/IMG_4431--a0b30bd61f31.png",
+    "sha256": "a0b30bd61f31664181226d57acc3fd4aa1ee93d90c062e75fb0018ee8a396826"
+  },
+  "Image-1--4d4f725ec078": {
+    "key": "Image-1--4d4f725ec078",
+    "width": 750,
+    "height": 1334,
+    "src": "/images/Image-1--4d4f725ec078-750.webp",
+    "srcset": "/images/Image-1--4d4f725ec078-480.webp 480w, /images/Image-1--4d4f725ec078-750.webp 750w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2018/10/Image-1.jpg",
+    "sourcePath": "images/Image-1--4d4f725ec078.jpg",
+    "sha256": "4d4f725ec078790403f4075124d54c5bb964fb4114ac657dbb0465a3b41005ee"
+  },
+  "IMG_4304--e439fc8e4c47": {
+    "key": "IMG_4304--e439fc8e4c47",
+    "width": 2938,
+    "height": 3918,
+    "src": "/images/IMG_4304--e439fc8e4c47-1600.webp",
+    "srcset": "/images/IMG_4304--e439fc8e4c47-480.webp 480w, /images/IMG_4304--e439fc8e4c47-800.webp 800w, /images/IMG_4304--e439fc8e4c47-1280.webp 1280w, /images/IMG_4304--e439fc8e4c47-1600.webp 1600w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2018/10/IMG_4304.jpg",
+    "sourcePath": "images/IMG_4304--e439fc8e4c47.jpg",
+    "sha256": "e439fc8e4c47dfb7f4db1dc305ef9b6447aaf87eb7c0337baa0417c96edda49e"
+  },
+  "IMG_3653--8ebd48b82a7f": {
+    "key": "IMG_3653--8ebd48b82a7f",
+    "width": 575,
+    "height": 1024,
+    "src": "/images/IMG_3653--8ebd48b82a7f-575.webp",
+    "srcset": "/images/IMG_3653--8ebd48b82a7f-480.webp 480w, /images/IMG_3653--8ebd48b82a7f-575.webp 575w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2018/10/IMG_3653.jpg",
+    "sourcePath": "images/IMG_3653--8ebd48b82a7f.jpg",
+    "sha256": "8ebd48b82a7ff3b83007336c5dc017ab25cc84426e79fac9f1e9299e3f44fc0d"
+  },
+  "IMG_3654--c377539c067c": {
+    "key": "IMG_3654--c377539c067c",
+    "width": 575,
+    "height": 1024,
+    "src": "/images/IMG_3654--c377539c067c-575.webp",
+    "srcset": "/images/IMG_3654--c377539c067c-480.webp 480w, /images/IMG_3654--c377539c067c-575.webp 575w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2018/10/IMG_3654.jpg",
+    "sourcePath": "images/IMG_3654--c377539c067c.jpg",
+    "sha256": "c377539c067c556b88d38691068794c04a9eada6c25c3855778d2e9af73e235d"
+  },
+  "OFFICIAL-POSTER-FOR-MOTM-2026--ad9c581451f3": {
+    "key": "OFFICIAL-POSTER-FOR-MOTM-2026--ad9c581451f3",
+    "width": 1070,
+    "height": 1492,
+    "src": "/images/OFFICIAL-POSTER-FOR-MOTM-2026--ad9c581451f3-1070.webp",
+    "srcset": "/images/OFFICIAL-POSTER-FOR-MOTM-2026--ad9c581451f3-480.webp 480w, /images/OFFICIAL-POSTER-FOR-MOTM-2026--ad9c581451f3-800.webp 800w, /images/OFFICIAL-POSTER-FOR-MOTM-2026--ad9c581451f3-1070.webp 1070w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2025/08/OFFICIAL-POSTER-FOR-MOTM-2026.jpg",
+    "sourcePath": "images/OFFICIAL-POSTER-FOR-MOTM-2026--ad9c581451f3.jpg",
+    "sha256": "ad9c581451f343deb730807414727df403f3e3332d6f49bfa6dfea774db8a78a"
+  },
+  "moto-2026-band-times--2acf954bdd4e": {
+    "key": "moto-2026-band-times--2acf954bdd4e",
+    "width": 1423,
+    "height": 799,
+    "src": "/images/moto-2026-band-times--2acf954bdd4e-1423.webp",
+    "srcset": "/images/moto-2026-band-times--2acf954bdd4e-480.webp 480w, /images/moto-2026-band-times--2acf954bdd4e-800.webp 800w, /images/moto-2026-band-times--2acf954bdd4e-1280.webp 1280w, /images/moto-2026-band-times--2acf954bdd4e-1423.webp 1423w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2025/08/moto-2026-band-times.png",
+    "sourcePath": "images/moto-2026-band-times--2acf954bdd4e.png",
+    "sha256": "2acf954bdd4e732fac90219d7f916e7492a43202d043892191cdc5a74443d042"
+  },
+  "Male-Domestic-Abuse-Conference-LJMU-Paul-Lavelle-Foundation--462e00f8d5d6": {
+    "key": "Male-Domestic-Abuse-Conference-LJMU-Paul-Lavelle-Foundation--462e00f8d5d6",
+    "width": 1410,
+    "height": 2000,
+    "src": "/images/Male-Domestic-Abuse-Conference-LJMU-Paul-Lavelle-Foundation--462e00f8d5d6-1410.webp",
+    "srcset": "/images/Male-Domestic-Abuse-Conference-LJMU-Paul-Lavelle-Foundation--462e00f8d5d6-480.webp 480w, /images/Male-Domestic-Abuse-Conference-LJMU-Paul-Lavelle-Foundation--462e00f8d5d6-800.webp 800w, /images/Male-Domestic-Abuse-Conference-LJMU-Paul-Lavelle-Foundation--462e00f8d5d6-1280.webp 1280w, /images/Male-Domestic-Abuse-Conference-LJMU-Paul-Lavelle-Foundation--462e00f8d5d6-1410.webp 1410w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2026/01/Male-Domestic-Abuse-Conference-LJMU-Paul-Lavelle-Foundation.png",
+    "sourcePath": "images/Male-Domestic-Abuse-Conference-LJMU-Paul-Lavelle-Foundation--462e00f8d5d6.png",
+    "sha256": "462e00f8d5d699f6d3b2fa6c18b7da64cf2f9650cfd2da4102c05b05f5e7cf7e"
+  },
+  "race-night-2026--ce017e52e9a7": {
+    "key": "race-night-2026--ce017e52e9a7",
+    "width": 1414,
+    "height": 2000,
+    "src": "/images/race-night-2026--ce017e52e9a7-1414.webp",
+    "srcset": "/images/race-night-2026--ce017e52e9a7-480.webp 480w, /images/race-night-2026--ce017e52e9a7-800.webp 800w, /images/race-night-2026--ce017e52e9a7-1280.webp 1280w, /images/race-night-2026--ce017e52e9a7-1414.webp 1414w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2026/01/race-night-2026.jpg",
+    "sourcePath": "images/race-night-2026--ce017e52e9a7.jpg",
+    "sha256": "ce017e52e9a7e557be2fd4264b1a35d19394938b001030eb668f7536dd1f8e37"
+  },
+  "Liverpool-motm--d598587ec35e": {
+    "key": "Liverpool-motm--d598587ec35e",
+    "width": 1460,
+    "height": 825,
+    "src": "/images/Liverpool-motm--d598587ec35e-1460.webp",
+    "srcset": "/images/Liverpool-motm--d598587ec35e-480.webp 480w, /images/Liverpool-motm--d598587ec35e-800.webp 800w, /images/Liverpool-motm--d598587ec35e-1280.webp 1280w, /images/Liverpool-motm--d598587ec35e-1460.webp 1460w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2023/04/Liverpool-motm.png",
+    "sourcePath": "images/Liverpool-motm--d598587ec35e.png",
+    "sha256": "d598587ec35e60fe5e44755438fea85992f2739647516e8675d285e0d2f5f9f4"
+  },
+  "WSH-2025-with-sessions-Web-scaled--15372b606a5d": {
+    "key": "WSH-2025-with-sessions-Web-scaled--15372b606a5d",
+    "width": 1810,
+    "height": 2560,
+    "src": "/images/WSH-2025-with-sessions-Web-scaled--15372b606a5d-1600.webp",
+    "srcset": "/images/WSH-2025-with-sessions-Web-scaled--15372b606a5d-480.webp 480w, /images/WSH-2025-with-sessions-Web-scaled--15372b606a5d-800.webp 800w, /images/WSH-2025-with-sessions-Web-scaled--15372b606a5d-1280.webp 1280w, /images/WSH-2025-with-sessions-Web-scaled--15372b606a5d-1600.webp 1600w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2025/01/WSH-2025-with-sessions-Web-scaled.jpg",
+    "sourcePath": "images/WSH-2025-with-sessions-Web-scaled--15372b606a5d.jpg",
+    "sha256": "15372b606a5de83e9e8e09277dbe19cdf13f814a045aa401d7cbf7eff8fbac0e"
+  },
+  "WSH-2025-family-funday-Web-scaled--c190706c42eb": {
+    "key": "WSH-2025-family-funday-Web-scaled--c190706c42eb",
+    "width": 1810,
+    "height": 2560,
+    "src": "/images/WSH-2025-family-funday-Web-scaled--c190706c42eb-1600.webp",
+    "srcset": "/images/WSH-2025-family-funday-Web-scaled--c190706c42eb-480.webp 480w, /images/WSH-2025-family-funday-Web-scaled--c190706c42eb-800.webp 800w, /images/WSH-2025-family-funday-Web-scaled--c190706c42eb-1280.webp 1280w, /images/WSH-2025-family-funday-Web-scaled--c190706c42eb-1600.webp 1600w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2025/01/WSH-2025-family-funday-Web-scaled.jpg",
+    "sourcePath": "images/WSH-2025-family-funday-Web-scaled--c190706c42eb.jpg",
+    "sha256": "c190706c42eb0d6bc9c10532ad25a99a962d35bef5b813fe4cfeae3ca878dfef"
+  },
+  "race-night-poster-Feb-2024--1d863ff3016b": {
+    "key": "race-night-poster-Feb-2024--1d863ff3016b",
+    "width": 1135,
+    "height": 1600,
+    "src": "/images/race-night-poster-Feb-2024--1d863ff3016b-1135.webp",
+    "srcset": "/images/race-night-poster-Feb-2024--1d863ff3016b-480.webp 480w, /images/race-night-poster-Feb-2024--1d863ff3016b-800.webp 800w, /images/race-night-poster-Feb-2024--1d863ff3016b-1135.webp 1135w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2024/02/race-night-poster-Feb-2024.jpg",
+    "sourcePath": "images/race-night-poster-Feb-2024--1d863ff3016b.jpg",
+    "sha256": "1d863ff3016bce0ad7c11cb220b0e56f3a07b2013584a23806efb411f310fc04"
+  },
+  "10k-run-2024--f35b7fffe271": {
+    "key": "10k-run-2024--f35b7fffe271",
+    "width": 1284,
+    "height": 841,
+    "src": "/images/10k-run-2024--f35b7fffe271-1284.webp",
+    "srcset": "/images/10k-run-2024--f35b7fffe271-480.webp 480w, /images/10k-run-2024--f35b7fffe271-800.webp 800w, /images/10k-run-2024--f35b7fffe271-1280.webp 1280w, /images/10k-run-2024--f35b7fffe271-1284.webp 1284w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2024/03/10k-run-2024.png",
+    "sourcePath": "images/10k-run-2024--f35b7fffe271.png",
+    "sha256": "f35b7fffe271081f82f49b7a8cb6226f9b04758d97a02ae0ff0fedec12f85b93"
+  },
+  "Love2run-uk-Info-Flyer--c2d83d3b6c7c": {
+    "key": "Love2run-uk-Info-Flyer--c2d83d3b6c7c",
+    "width": 1429,
+    "height": 2000,
+    "src": "/images/Love2run-uk-Info-Flyer--c2d83d3b6c7c-1429.webp",
+    "srcset": "/images/Love2run-uk-Info-Flyer--c2d83d3b6c7c-480.webp 480w, /images/Love2run-uk-Info-Flyer--c2d83d3b6c7c-800.webp 800w, /images/Love2run-uk-Info-Flyer--c2d83d3b6c7c-1280.webp 1280w, /images/Love2run-uk-Info-Flyer--c2d83d3b6c7c-1429.webp 1429w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2025/01/Love2run.uk-Info-Flyer.png",
+    "sourcePath": "images/Love2run-uk-Info-Flyer--c2d83d3b6c7c.png",
+    "sha256": "c2d83d3b6c7c727520676b0d4476d35e4a99485b5d95c72b4f47d38ed9bd277c"
+  },
+  "Ladies-world-cup-poster--4393047928d6": {
+    "key": "Ladies-world-cup-poster--4393047928d6",
+    "width": 1429,
+    "height": 801,
+    "src": "/images/Ladies-world-cup-poster--4393047928d6-1429.webp",
+    "srcset": "/images/Ladies-world-cup-poster--4393047928d6-480.webp 480w, /images/Ladies-world-cup-poster--4393047928d6-800.webp 800w, /images/Ladies-world-cup-poster--4393047928d6-1280.webp 1280w, /images/Ladies-world-cup-poster--4393047928d6-1429.webp 1429w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2023/06/Ladies-world-cup-poster.png",
+    "sourcePath": "images/Ladies-world-cup-poster--4393047928d6.png",
+    "sha256": "4393047928d65184d0b8f0a3a70c7df98b0c5cfd1c8b5af9b7b134d655adce1c"
+  },
+  "d-day-80th-celebrations-pic--dd38d8fe1c9b": {
+    "key": "d-day-80th-celebrations-pic--dd38d8fe1c9b",
+    "width": 641,
+    "height": 642,
+    "src": "/images/d-day-80th-celebrations-pic--dd38d8fe1c9b-641.webp",
+    "srcset": "/images/d-day-80th-celebrations-pic--dd38d8fe1c9b-480.webp 480w, /images/d-day-80th-celebrations-pic--dd38d8fe1c9b-641.webp 641w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2024/05/d-day-80th-celebrations-pic.jpg",
+    "sourcePath": "images/d-day-80th-celebrations-pic--dd38d8fe1c9b.jpg",
+    "sha256": "dd38d8fe1c9ba09f10d5a47b41176c0c148286ebf225cba143b57a906c5f5886"
+  },
+  "all-bands-named--7f606a36c987": {
+    "key": "all-bands-named--7f606a36c987",
+    "width": 1442,
+    "height": 807,
+    "src": "/images/all-bands-named--7f606a36c987-1442.webp",
+    "srcset": "/images/all-bands-named--7f606a36c987-480.webp 480w, /images/all-bands-named--7f606a36c987-800.webp 800w, /images/all-bands-named--7f606a36c987-1280.webp 1280w, /images/all-bands-named--7f606a36c987-1442.webp 1442w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2024/07/all-bands-named.png",
+    "sourcePath": "images/all-bands-named--7f606a36c987.png",
+    "sha256": "7f606a36c98718908ff1a058f8e07cabf219e04c12f02d37585679d581bda3df"
+  },
+  "2--d7ee16fc7375": {
+    "key": "2--d7ee16fc7375",
+    "width": 1414,
+    "height": 2000,
+    "src": "/images/2--d7ee16fc7375-1414.webp",
+    "srcset": "/images/2--d7ee16fc7375-480.webp 480w, /images/2--d7ee16fc7375-800.webp 800w, /images/2--d7ee16fc7375-1280.webp 1280w, /images/2--d7ee16fc7375-1414.webp 1414w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2024/02/2.png",
+    "sourcePath": "images/2--d7ee16fc7375.png",
+    "sha256": "d7ee16fc7375159c7e848b9776e869ad7af0f9ebd749bec7d4c691f4fd8f24eb"
+  },
+  "Beer-Festival-Blue-Light-Discount--4fef0dbdc972": {
+    "key": "Beer-Festival-Blue-Light-Discount--4fef0dbdc972",
+    "width": 1414,
+    "height": 2000,
+    "src": "/images/Beer-Festival-Blue-Light-Discount--4fef0dbdc972-1414.webp",
+    "srcset": "/images/Beer-Festival-Blue-Light-Discount--4fef0dbdc972-480.webp 480w, /images/Beer-Festival-Blue-Light-Discount--4fef0dbdc972-800.webp 800w, /images/Beer-Festival-Blue-Light-Discount--4fef0dbdc972-1280.webp 1280w, /images/Beer-Festival-Blue-Light-Discount--4fef0dbdc972-1414.webp 1414w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2024/02/Beer-Festival-Blue-Light-Discount.png",
+    "sourcePath": "images/Beer-Festival-Blue-Light-Discount--4fef0dbdc972.png",
+    "sha256": "4fef0dbdc972428122443cd8058dfcb7b6c3597f6bea199d0b0d480213b0a65a"
+  },
+  "bonus-ball-9month--e678c678a45a": {
+    "key": "bonus-ball-9month--e678c678a45a",
+    "width": 1447,
+    "height": 772,
+    "src": "/images/bonus-ball-9month--e678c678a45a-1447.webp",
+    "srcset": "/images/bonus-ball-9month--e678c678a45a-480.webp 480w, /images/bonus-ball-9month--e678c678a45a-800.webp 800w, /images/bonus-ball-9month--e678c678a45a-1280.webp 1280w, /images/bonus-ball-9month--e678c678a45a-1447.webp 1447w",
+    "sourceUrl": "https://paullavellefoundation.co.uk/wp-content/uploads/2023/05/bonus-ball-9month.png",
+    "sourcePath": "images/bonus-ball-9month--e678c678a45a.png",
+    "sha256": "e678c678a45ae3f00dc0bc79c3d56d134d512476e81833b5999a269e47846b2b"
+  }
+}

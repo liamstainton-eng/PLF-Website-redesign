@@ -1,0 +1,31 @@
+---
+import '../styles/global.css';
+import Photo from '../components/Photo.astro';
+interface Props { title: string; description?: string; }
+const {title,description='Support for male victims and survivors of domestic abuse, healthy relationship education and a community brought together in Paul’s memory.'}=Astro.props;
+const current=Astro.url.pathname;
+const links=[['Our work','/what-we-do/'],['Join us','/join-us/'],['Our story','/our-story/']];
+---
+<!doctype html>
+<html lang="en-GB">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="description" content={description}/><meta name="robots" content="noindex, nofollow"/><meta name="theme-color" content="#153f55"/><title>{title} | Paul Lavelle Foundation</title></head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="utility"><div class="wrap utility-inner"><span>Here for our community.</span><div><a href="tel:01516513777">Support: 0151 651 3777</a><span class="utility-divider">·</span><span class="demo-label">Design preview</span><a class="quick-exit" href="https://www.google.co.uk/" aria-label="Quick exit: leave this website">Quick exit <span aria-hidden="true">↗</span></a></div></div></div>
+<header class="site-header"><div class="wrap header-inner">
+<a class="brand" href="/" aria-label="Paul Lavelle Foundation home"><span class="brand-mark"><Photo name="logo" alt="" eager sizes="64px" /></span><span>PAUL LAVELLE<span class="brand-sub">FOUNDATION</span></span></a>
+<nav aria-label="Main navigation" id="site-nav" class="main-nav">{links.map(([label,href])=><a href={href} aria-current={current===href?'page':undefined}>{label}</a>)}<a class="support-link" href="/get-support/" aria-current={current==='/get-support/'?'page':undefined}>Get support</a><a class="button button-small" href="/donate/">Donate <span aria-hidden="true">↗</span></a></nav>
+<button class="menu-toggle" aria-expanded="false" aria-controls="site-nav"><span>Menu</span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 8h16M4 16h16" stroke="currentColor" stroke-width="1.5"/></svg></button>
+</div></header>
+<main id="main" tabindex="-1"><slot /></main>
+<footer class="site-footer"><div class="wrap footer-top"><div class="footer-intro"><a class="brand footer-brand" href="/"><span class="brand-mark"><Photo name="logo" alt="" sizes="64px" /></span><span>PAUL LAVELLE<span class="brand-sub">FOUNDATION</span></span></a><p>In Paul’s memory.<br/>A stronger community, together.</p></div><div><h2>Find your way</h2><a href="/what-we-do/">Our work</a><a href="/get-support/">Get support</a><a href="/activity-groups/">Community activities</a><a href="/events/">Events</a><a href="/news/">News & stories</a></div><div><h2>Get in touch</h2><a href="tel:01516513777">Support: 0151 651 3777</a><a href="tel:01512944176">Office: 0151 294 4176</a><a href="mailto:info@paullavellefoundation.co.uk">Email the foundation</a><a href="/get-in-touch/">Contact & opening hours</a><p class="footer-note">The support line is not a crisis line</p></div><div><h2>Useful information</h2><a href="/resources/">Policies & resources</a><a href="/healthy-relationships-healthy-you/">Our app</a><a href="/donate/#fundraise">Fundraise with us</a><a href="/privacy-policy/">Privacy</a><a href="/cookie-policy-uk/">Cookies</a></div></div><div class="wrap footer-bottom"><span>© {new Date().getFullYear()} Paul Lavelle Foundation</span><span>Demo · content snapshot 8 October 2026</span><a href="/resources/#preview">About this preview</a></div></footer>
+<script>
+const menu=document.querySelector<HTMLButtonElement>('.menu-toggle');
+const nav=document.querySelector<HTMLElement>('#site-nav');
+function closeMenu(){menu?.setAttribute('aria-expanded','false');nav?.classList.remove('is-open');}
+menu?.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));nav?.classList.toggle('is-open',open);});
+document.addEventListener('keydown',(event)=>{if(event.key==='Escape'&&menu?.getAttribute('aria-expanded')==='true'){closeMenu();menu.focus();}});
+nav?.querySelectorAll('a').forEach(link=>link.addEventListener('click',closeMenu));
+window.matchMedia('(min-width: 1001px)').addEventListener('change',event=>{if(event.matches)closeMenu();});
+</script>
+</body></html>
