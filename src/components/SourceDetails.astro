@@ -1,0 +1,6 @@
+---
+import SourceText from './SourceText.astro';
+interface Props { page: { paragraphs: string[]; url: string }; label?: string; }
+const {page,label='Read the full published information'}=Astro.props;
+---
+<details class="source-details"><summary>{label}</summary><div><p class="source-note">Published content captured on 8 October 2026. Original wording is retained here for context; session details, policies and service availability may need updating. <a href={page.url}>View the original page ↗</a></p><SourceText paragraphs={page.paragraphs}/></div></details>
