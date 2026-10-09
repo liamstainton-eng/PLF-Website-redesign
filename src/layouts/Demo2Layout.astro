@@ -1,0 +1,52 @@
+---
+import '../styles/global.css';
+import '@fontsource-variable/manrope';
+import '@fontsource/barlow-condensed/700.css';
+import '@fontsource/barlow-condensed/800.css';
+import '../styles/demo-2.css';
+import Photo from '../components/Photo.astro';
+import Arrow from '../components/Arrow.astro';
+interface Props { title: string; description?: string; }
+const {title,description='Specialist support for men affected by domestic abuse, healthy relationship education and a community moving forward together.'}=Astro.props;
+const base='/demo-2';
+const current=Astro.url.pathname;
+const nav=[['Our work','/what-we-do/'],['Our community','/activity-groups/'],['Events','/events/'],['Our story','/our-story/']];
+---
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content={description}/><meta name="robots" content="noindex, nofollow"/>
+  <meta name="theme-color" content="#123e64"/><meta property="og:title" content={title+' | Paul Lavelle Foundation'}/>
+  <meta property="og:description" content={description}/><title>{title} | PLF · Demo 2</title>
+</head>
+<body class="demo-two">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="v2-utility"><div class="v2-container"><span class="v2-preview">Design preview 02 <span aria-hidden="true">/</span> <a href="/">Compare demo 1</a></span><div><a href="tel:01516513777" class="v2-phone">Support: 0151 651 3777</a><a class="v2-exit" href="https://www.google.co.uk/" aria-label="Quick exit: leave this website">Quick exit <span aria-hidden="true">↗</span></a></div></div></div>
+<header class="v2-header"><div class="v2-container v2-header-inner">
+  <a class="v2-brand" href={base+'/'} aria-label="Paul Lavelle Foundation home"><span class="v2-brand-mark"><Photo name="logo" alt="" eager sizes="64px"/></span><span>PAUL LAVELLE<small>FOUNDATION</small></span></a>
+  <nav class="v2-nav" id="v2-nav" aria-label="Main navigation">{nav.map(([label,href])=><a href={base+href} aria-current={current===base+href?'page':undefined}>{label}</a>)}<a class="v2-support" href={base+'/get-support/'}>Get support <span aria-hidden="true">↗</span></a><a class="v2-button v2-button-yellow v2-nav-donate" href={base+'/donate/'}>Donate <Arrow/></a></nav>
+  <button class="v2-menu" aria-label="Open navigation" aria-controls="v2-nav" aria-expanded="false"><span>Menu</span><span class="v2-menu-lines" aria-hidden="true"></span></button>
+</div></header>
+<main id="main" tabindex="-1"><slot/></main>
+<footer class="v2-footer"><div class="v2-container">
+  <div class="v2-footer-top"><div><p class="v2-kicker">In Paul’s memory. For our community.</p><p class="v2-footer-statement">We’re stronger<br/><span>together.</span></p><a class="v2-button v2-button-yellow" href={base+'/join-us/'}>Be part of it <Arrow/></a></div><div class="v2-footer-links"><div><h2>Explore</h2>{nav.map(([label,href])=><a href={base+href}>{label}</a>)}<a href={base+'/news/'}>News & stories</a><a href={base+'/healthy-relationships-healthy-you/'}>Our app</a></div><div><h2>Here to help</h2><a href={base+'/get-support/'}>Get support</a><a href={base+'/referral-forms/self-referral/'}>Self-referral</a><a href={base+'/agency-referral/'}>Professional referrals</a><a href={base+'/resources/'}>Policies & resources</a><a href={base+'/get-in-touch/'}>Contact & opening hours</a><a href={base+'/donate/#fundraise'}>Fundraise with us</a></div></div></div>
+  <div class="v2-footer-contact"><a href="tel:01516513777"><small>Support line · not a crisis line</small>0151 651 3777</a><a href="tel:01512944176"><small>General enquiries</small>0151 294 4176</a><a href="mailto:info@paullavellefoundation.co.uk"><small>Say hello</small>Email the foundation <span aria-hidden="true">↗</span></a></div>
+  <div class="v2-footer-bottom"><span>© {new Date().getFullYear()} Paul Lavelle Foundation</span><div><a href={base+'/privacy-policy/'}>Privacy</a><a href={base+'/cookie-policy-uk/'}>Cookies</a><a href={base+'/resources/#preview'}>About this preview</a></div><span>Content snapshot · 8 October 2026</span></div>
+</div></footer>
+<script>
+const menu=document.querySelector<HTMLButtonElement>('.v2-menu');
+const nav=document.querySelector<HTMLElement>('.v2-nav');
+function closeMenu(){menu?.setAttribute('aria-expanded','false');menu?.setAttribute('aria-label','Open navigation');nav?.classList.remove('is-open');}
+menu?.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Close navigation':'Open navigation');nav?.classList.toggle('is-open',open);});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&menu?.getAttribute('aria-expanded')==='true'){closeMenu();menu.focus();}});
+nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+window.matchMedia('(min-width: 1121px)').addEventListener('change',closeMenu);
+const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
+if(!reduced.matches&&'IntersectionObserver' in window){
+  const observer=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}},{threshold:.08});
+  document.querySelectorAll('[data-reveal]').forEach(el=>{el.classList.add('will-reveal');observer.observe(el);});
+  reduced.addEventListener('change',()=>{document.querySelectorAll('.will-reveal').forEach(el=>el.classList.add('is-visible'));observer.disconnect();},{once:true});
+}
+</script>
+</body></html>

@@ -1,0 +1,17 @@
+---
+import Photo from './Photo.astro';
+import Arrow from './Arrow.astro';
+import {activities} from '../data/site';
+---
+<div class="v2-activity-explorer" data-activity-explorer>
+  <div class="v2-activity-tabs" role="tablist" aria-label="Explore community activities">{activities.map((activity,i)=><button id={'activity-tab-'+activity.id} role="tab" type="button" aria-selected={i===0} aria-controls={'activity-panel-'+activity.id} tabindex={i===0?0:-1} data-activity-tab={activity.id}><span class="v2-tab-number">0{i+1}</span>{activity.id==='swimming'?'Swimming':activity.name}<span class="v2-tab-arrow" aria-hidden="true">↗</span></button>)}</div>
+  {activities.map((activity,i)=><div class="v2-activity-panel" role="tabpanel" id={'activity-panel-'+activity.id} aria-labelledby={'activity-tab-'+activity.id} hidden={i!==0} tabindex="0" data-activity-panel={activity.id}><div class="v2-activity-image"><Photo name={activity.image} alt={activity.alt} sizes="(max-width: 760px) 100vw, 55vw"/><span>Room for a conversation.<br/>Space to be yourself.</span></div><div class="v2-activity-copy"><p class="v2-kicker">{activity.tag}</p><h3>{activity.id==='running'?<>Find your pace.<br/>Find your people.</>:activity.id==='cycling'?<>A shared route.<br/>A common purpose.</>:<>Brave the water.<br/>Share the moment.</>}</h3><p>{activity.description}</p><ul>{activity.facts.map(fact=><li>{fact}</li>)}</ul><a class="v2-button v2-button-blue" href={'/demo-2/activity-groups/#'+activity.id}>Explore {activity.id==='swimming'?'swimming':activity.id} <Arrow/></a><p class="v2-session-note">Confirm current sessions with the organisers before attending.</p></div></div>)}
+</div>
+<noscript><p>All activity information is available on the <a href="/demo-2/activity-groups/">community activities page</a>.</p></noscript>
+<script>
+const explorer=document.querySelector('[data-activity-explorer]');
+const tabs=Array.from(explorer?.querySelectorAll<HTMLButtonElement>('[data-activity-tab]')||[]);
+const panels=Array.from(explorer?.querySelectorAll<HTMLElement>('[data-activity-panel]')||[]);
+function selectTab(index:number,focus=false){tabs.forEach((tab,i)=>{tab.setAttribute('aria-selected',String(i===index));tab.tabIndex=i===index?0:-1;});panels.forEach((panel,i)=>panel.hidden=i!==index);if(focus)tabs[index]?.focus();}
+tabs.forEach((tab,index)=>{tab.addEventListener('click',()=>selectTab(index));tab.addEventListener('keydown',event=>{let next=index;if(event.key==='ArrowRight')next=(index+1)%tabs.length;else if(event.key==='ArrowLeft')next=(index+tabs.length-1)%tabs.length;else if(event.key==='Home')next=0;else if(event.key==='End')next=tabs.length-1;else return;event.preventDefault();selectTab(next,true);});});
+</script>

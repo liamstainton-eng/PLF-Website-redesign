@@ -1,0 +1,28 @@
+---
+import Photo from './Photo.astro';
+import images from '../data/images.json';
+const gallery=[
+  {name:'cycling',alt:'The PLF cycling club gathered with their bikes',caption:'A shared ride. A shared purpose.'},
+  {name:'swimming',alt:'PLF swimming group together on the beach',caption:'Good company, whatever the weather.'},
+  {name:'running',alt:'PLF runners following a coastal trail',caption:'Finding our pace, together.'},
+  {name:'hero',alt:'PLF LEJOG cycling team at Claire House',caption:'Making memories in Paul’s name.'},
+];
+---
+<div class="v2-gallery">{gallery.map((photo,i)=><button type="button" class="v2-gallery-item" aria-label={'Enlarge photograph: '+photo.alt} data-gallery-index={i} data-gallery-src={images[photo.name as keyof typeof images].src} data-gallery-alt={photo.alt} data-gallery-caption={photo.caption}><Photo name={photo.name} alt={photo.alt} sizes="(max-width: 760px) 65vw, 26vw"/><span><span>{photo.caption}</span><span aria-hidden="true">↗</span></span></button>)}</div>
+<dialog class="v2-lightbox" aria-labelledby="gallery-caption"><div class="v2-lightbox-toolbar"><span data-gallery-counter>1 / 4</span><button type="button" data-gallery-close aria-label="Close photograph">Close <span aria-hidden="true">×</span></button></div><img data-gallery-image src={images.cycling.src} alt={gallery[0].alt} width="1600" height="1200" loading="lazy"/><div class="v2-lightbox-bottom"><button type="button" data-gallery-prev aria-label="Previous photograph">←</button><p id="gallery-caption">{gallery[0].caption}</p><button type="button" data-gallery-next aria-label="Next photograph">→</button></div></dialog>
+<script>
+const photos=Array.from(document.querySelectorAll<HTMLButtonElement>('[data-gallery-index]'));
+const dialog=document.querySelector<HTMLDialogElement>('.v2-lightbox');
+const image=dialog?.querySelector<HTMLImageElement>('[data-gallery-image]');
+const caption=dialog?.querySelector('#gallery-caption');
+const counter=dialog?.querySelector('[data-gallery-counter]');
+let active=0;
+function display(index:number){active=(index+photos.length)%photos.length;const photo=photos[active];if(image){image.src=photo.dataset.gallerySrc||'';image.alt=photo.dataset.galleryAlt||'';}if(caption)caption.textContent=photo.dataset.galleryCaption||'';if(counter)counter.textContent=`${active+1} / ${photos.length}`;}
+photos.forEach((photo,index)=>photo.addEventListener('click',()=>{display(index);dialog?.showModal();document.body.style.overflow='hidden';}));
+dialog?.addEventListener('close',()=>{document.body.style.overflow='';});
+dialog?.querySelector('[data-gallery-close]')?.addEventListener('click',()=>dialog.close());
+dialog?.querySelector('[data-gallery-prev]')?.addEventListener('click',()=>display(active-1));
+dialog?.querySelector('[data-gallery-next]')?.addEventListener('click',()=>display(active+1));
+dialog?.addEventListener('keydown',event=>{if(event.key==='ArrowRight'){event.preventDefault();display(active+1);}if(event.key==='ArrowLeft'){event.preventDefault();display(active-1);}});
+dialog?.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
+</script>

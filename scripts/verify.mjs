@@ -23,8 +23,9 @@ for(const file of files){
  }
 }
 let paragraphs=0;
+for(const prefix of ['','/demo-2']){
 for(const record of records){
- const file=routeFile(record.route);if(!fs.existsSync(file)){failures.push(`Missing original route ${record.route}`);continue;}
+ const file=routeFile(prefix+record.route);if(!fs.existsSync(file)){failures.push(`Missing original route ${prefix+record.route}`);continue;}
  if(crypto.createHash('sha256').update(record.body).digest('hex')!==record.sourceBodySha256)failures.push(`Source hash changed: ${record.route}`);
  const html=fs.readFileSync(file,'utf8');const rendered=text(html);
  // The captured agency page was a 404; its useful replacement is documented.
@@ -35,7 +36,9 @@ for(const record of records){
  }
  if(record.kind==='event'&&!html.includes('Booking is closed'))failures.push(`Open historic booking: ${record.route}`);
 }
-for(const route of ['/get-support/','/referral-forms/self-referral/','/agency-referral/'])if(/<form\b/.test(fs.readFileSync(routeFile(route),'utf8')))failures.push(`Sensitive form rendered on ${route}`);
-if(!fs.readFileSync(routeFile('/donate/'),'utf8').includes('https://www.justgiving.com/charity/paullavellefoundation'))failures.push('Donation handoff changed');
+for(const route of ['/get-support/','/referral-forms/self-referral/','/agency-referral/'])if(/<form\b/.test(fs.readFileSync(routeFile(prefix+route),'utf8')))failures.push(`Sensitive form rendered on ${prefix+route}`);
+if(!fs.readFileSync(routeFile(prefix+'/donate/'),'utf8').includes('https://www.justgiving.com/charity/paullavellefoundation'))failures.push('Donation handoff changed');
+}
+for(const file of files.filter(file=>file.includes('demo-2'))){for(const [,href] of fs.readFileSync(file,'utf8').matchAll(/href="(\/[^\"]*)"/g)){if(href!=='/'&&!href.startsWith('/demo-2/')&&!href.startsWith('/documents/')&&!href.startsWith('/_astro/'))failures.push(`Second demo leaves its route space: ${file}: ${href}`);}}
 if(failures.length){console.error(failures.join('\n'));process.exit(1);}
-console.log(`Verified ${files.length} built pages, ${records.length} original routes, ${paragraphs} source paragraphs, local links/assets, archived bookings and referral boundaries.`);
+console.log(`Verified ${files.length} built pages, ${records.length} original routes in each demo, ${paragraphs} source paragraphs across both demos, local links/assets, archived bookings and referral boundaries.`);
