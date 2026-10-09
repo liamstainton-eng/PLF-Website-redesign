@@ -27,6 +27,6 @@ Before launch, PLF still needs to confirm the conflicting addresses, activity in
 
 ## Review
 
-Start with the homepage at `/demo-2/`, then try the activity tabs and photo viewer. Review `/demo-2/donate/`, `/demo-2/events/`, `/demo-2/get-support/`, `/demo-2/our-story/` and the original archive routes under the new prefix. Use the comparison link in the desktop utility bar to return to the first design.
+Start with the homepage at `/demo-2/`, then try the activity tabs and photo viewer. Review `/demo-2/donate/`, `/demo-2/events/`, `/demo-2/get-support/`, `/demo-2/our-story/` and the original archive routes under the new prefix. Use Compare designs in either version to open `/compare/`, with both designs on one page and desktop/mobile preview controls.
 
 Validation commands are `npm run check`, `npm run build` and `npm run verify`. The verifier checks both route sets, preserved source paragraphs, local links and assets, image attributes, headings, preview indexing controls, historic event status and the referral/provider boundaries.

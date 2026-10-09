@@ -39,6 +39,6 @@ for(const record of records){
 for(const route of ['/get-support/','/referral-forms/self-referral/','/agency-referral/'])if(/<form\b/.test(fs.readFileSync(routeFile(prefix+route),'utf8')))failures.push(`Sensitive form rendered on ${prefix+route}`);
 if(!fs.readFileSync(routeFile(prefix+'/donate/'),'utf8').includes('https://www.justgiving.com/charity/paullavellefoundation'))failures.push('Donation handoff changed');
 }
-for(const file of files.filter(file=>file.includes('demo-2'))){for(const [,href] of fs.readFileSync(file,'utf8').matchAll(/href="(\/[^\"]*)"/g)){if(href!=='/'&&!href.startsWith('/demo-2/')&&!href.startsWith('/documents/')&&!href.startsWith('/_astro/'))failures.push(`Second demo leaves its route space: ${file}: ${href}`);}}
+for(const file of files.filter(file=>file.includes('demo-2'))){for(const [,href] of fs.readFileSync(file,'utf8').matchAll(/href="(\/[^\"]*)"/g)){if(href!=='/'&&href!=='/compare/'&&!href.startsWith('/demo-2/')&&!href.startsWith('/documents/')&&!href.startsWith('/_astro/'))failures.push(`Second demo leaves its route space: ${file}: ${href}`);}}
 if(failures.length){console.error(failures.join('\n'));process.exit(1);}
 console.log(`Verified ${files.length} built pages, ${records.length} original routes in each demo, ${paragraphs} source paragraphs across both demos, local links/assets, archived bookings and referral boundaries.`);

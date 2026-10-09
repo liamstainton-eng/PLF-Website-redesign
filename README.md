@@ -15,8 +15,9 @@ Run these commands inside the `plf-website-redesign` directory. Open either vers
 
 - Demo 1: http://127.0.0.1:4321/
 - Demo 2: http://127.0.0.1:4321/demo-2/
+- Both on one page: http://127.0.0.1:4321/compare/
 
-Demo 2 uses larger photographs, expressive typography, varied section layouts, activity tabs and an accessible photo viewer. Its content pages stay within `/demo-2/`; the top comparison link returns to Demo 1. See [the Demo 2 design notes](docs/DEMO-2.md).
+Demo 2 uses larger photographs, expressive typography, varied section layouts, activity tabs and an accessible photo viewer. Its content pages stay within `/demo-2/`; both versions link to a comparison page with independent interactive previews and desktop/mobile size controls. See [the Demo 2 design notes](docs/DEMO-2.md).
 
 For a production preview:
 
@@ -36,7 +37,7 @@ npm run preview
 - Our work → education, For You Project, LGBTQ+ support and service information.
 - Policies & resources → original documents and preview context.
 
-Each demo represents all 75 captured PLF routes and adds five navigation pages. Together with the shared 404 recovery page, the build contains 161 pages. Each version retains the 471 source paragraphs, often in expandable published-information sections. Shared contact/footer text is consolidated; the captured broken agency-referral page has a useful contact replacement. See docs/route-coverage.csv and docs/shared-contact-source.txt.
+Each demo represents all 75 captured PLF routes and adds five navigation pages. Together with the comparison page and shared 404 recovery page, the build contains 162 pages. Each version retains the 471 source paragraphs, often in expandable published-information sections. Shared contact/footer text is consolidated; the captured broken agency-referral page has a useful contact replacement. See docs/route-coverage.csv and docs/shared-contact-source.txt.
 
 ## Boundaries
 
