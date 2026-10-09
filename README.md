@@ -28,6 +28,25 @@ npm run verify
 npm run preview
 ```
 
+## GitHub Pages preview
+
+- Share Demo 2: https://liamstainton-eng.github.io/PLF-Website-redesign/demo-2/
+- Compare both designs: https://liamstainton-eng.github.io/PLF-Website-redesign/compare/
+
+The GitHub Actions workflow validates and publishes the static build when changes are pushed to `demo/second-design` or `main`. It sets `PLF_SITE_URL` and `PLF_BASE_PATH` for GitHub's project directory; local development keeps its existing root URLs. The deployment remains a labelled design preview and does not change PLF's live website. Source changes remain in the review pull request until the owner merges them.
+
+To reproduce the hosted build in PowerShell:
+
+```powershell
+$env:PLF_SITE_URL = 'https://liamstainton-eng.github.io'
+$env:PLF_BASE_PATH = '/PLF-Website-redesign/'
+npm run build
+npm run verify
+npm run preview
+```
+
+Use the prefixed URL shown by the preview server. Clear those environment variables before returning to the usual local root URLs.
+
 ## Review journeys
 
 - Home → Make a difference → existing JustGiving profile.

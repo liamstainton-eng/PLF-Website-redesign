@@ -1,7 +1,8 @@
 ---
 import images from '../data/images.json';
+import {sitePath,siteSrcset} from '../utils/paths';
 interface Props { name: string; alt: string; class?: string; eager?: boolean; sizes?: string; }
 const { name, alt, class: className='', eager=false, sizes='(max-width: 760px) 100vw, 50vw' }=Astro.props;
 const photo=images[name as keyof typeof images];
 ---
-{photo && <img src={photo.src} srcset={photo.srcset} sizes={sizes} width={photo.width} height={photo.height} alt={alt} loading={eager?'eager':'lazy'} decoding="async" fetchpriority={eager?'high':'auto'} class={className} />}
+{photo && <img src={sitePath(photo.src)} srcset={siteSrcset(photo.srcset)} sizes={sizes} width={photo.width} height={photo.height} alt={alt} loading={eager?'eager':'lazy'} decoding="async" fetchpriority={eager?'high':'auto'} class={className} />}

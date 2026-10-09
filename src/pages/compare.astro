@@ -1,4 +1,5 @@
 ---
+import {sitePath} from '../utils/paths';
 import '@fontsource-variable/manrope';
 import '../styles/compare.css';
 import Photo from '../components/Photo.astro';
@@ -20,7 +21,7 @@ const demos=[
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="compare-header">
-  <a class="compare-brand" href="/"><span class="compare-mark"><Photo name="logo" alt="" eager sizes="48px"/></span><span>Paul Lavelle Foundation<small>Design comparison</small></span></a>
+  <a class="compare-brand" href={sitePath('/')}><span class="compare-mark"><Photo name="logo" alt="" eager sizes="48px"/></span><span>Paul Lavelle Foundation<small>Design comparison</small></span></a>
   <a class="quick-exit" href="https://www.google.co.uk/" target="_top" aria-label="Quick exit: leave this website">Quick exit <span aria-hidden="true">↗</span></a>
 </header>
 <main id="main" tabindex="-1">
@@ -33,9 +34,9 @@ const demos=[
   </section>
   <div class="compare-grid">
     {demos.map(demo=><section class="demo-card" aria-labelledby={'demo-title-'+demo.number}>
-      <div class="demo-card-header"><div><p class="eyebrow">Demo {demo.number}</p><h2 id={'demo-title-'+demo.number}>{demo.name}</h2></div><a href={demo.href} target="_blank" rel="noopener" aria-label={'Open Demo '+Number(demo.number)+' at full size in a new tab'}>Open full size <span aria-hidden="true">↗</span></a></div>
+      <div class="demo-card-header"><div><p class="eyebrow">Demo {demo.number}</p><h2 id={'demo-title-'+demo.number}>{demo.name}</h2></div><a href={sitePath(demo.href)} target="_blank" rel="noopener" aria-label={'Open Demo '+Number(demo.number)+' at full size in a new tab'}>Open full size <span aria-hidden="true">↗</span></a></div>
       <p class="demo-description">{demo.description}</p>
-      <div class="preview-viewport"><iframe src={demo.href} title={'Demo '+Number(demo.number)+' interactive website preview'}></iframe></div>
+      <div class="preview-viewport"><iframe src={sitePath(demo.href)} title={'Demo '+Number(demo.number)+' interactive website preview'}></iframe></div>
     </section>)}
   </div>
   <p class="compare-help">Scroll and use the links inside each preview. External services open in a new tab. Quick Exit leaves the whole comparison page.</p>
@@ -76,7 +77,7 @@ document.querySelectorAll<HTMLIFrameElement>('iframe').forEach(frame=>{
   function prepareLinks(){
     frame.contentDocument?.querySelectorAll<HTMLAnchorElement>('a[href]').forEach(link=>{
       const destination=new URL(link.href);
-      if(link.matches('.quick-exit,.v2-exit')||destination.pathname==='/compare/')link.target='_top';
+      if(link.matches('.quick-exit,.v2-exit')||destination.origin===location.origin&&destination.pathname.endsWith('/compare/'))link.target='_top';
       else if(['http:','https:'].includes(destination.protocol)&&destination.origin!==location.origin){link.target='_blank';link.rel='noopener noreferrer';}
     });
   }

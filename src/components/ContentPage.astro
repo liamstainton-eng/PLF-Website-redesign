@@ -2,6 +2,7 @@
 import OriginalLayout from '../layouts/Layout.astro';
 import Demo2Layout from '../layouts/Demo2Layout.astro';
 import { getDemoPages } from '../data/pages';
+import {sitePath} from '../utils/paths';
 import Photo from '../components/Photo.astro';
 import Arrow from '../components/Arrow.astro';
 import SourceText from '../components/SourceText.astro';
@@ -11,7 +12,7 @@ import {provider,resources,services,activities} from '../data/site';
 interface Props { page: ReturnType<typeof getDemoPages>[number]; version?: 1 | 2; }
 const {page,version=1}=Astro.props;
 const Layout=version===2?Demo2Layout:OriginalLayout;
-const url=(href:string)=>version===2&&href.startsWith('/')&&!href.startsWith('/documents/')?'/demo-2'+href:href;
+const url=(href:string)=>sitePath(version===2&&href.startsWith('/')&&!href.startsWith('/documents/')?'/demo-2'+href:href);
 
 const route=page.route;
 const source=records.find(p=>p.route===route);

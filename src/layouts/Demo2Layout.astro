@@ -1,4 +1,5 @@
 ---
+import {sitePath,pagePath} from '../utils/paths';
 import '../styles/global.css';
 import '@fontsource-variable/manrope';
 import '@fontsource/barlow-condensed/700.css';
@@ -9,7 +10,7 @@ import Arrow from '../components/Arrow.astro';
 interface Props { title: string; description?: string; }
 const {title,description='Specialist support for men affected by domestic abuse, healthy relationship education and a community moving forward together.'}=Astro.props;
 const base='/demo-2';
-const current=Astro.url.pathname;
+const current=pagePath(Astro.url.pathname);
 const nav=[['Our work','/what-we-do/'],['Our community','/activity-groups/'],['Events','/events/'],['Our story','/our-story/']];
 ---
 <!doctype html>
@@ -22,17 +23,17 @@ const nav=[['Our work','/what-we-do/'],['Our community','/activity-groups/'],['E
 </head>
 <body class="demo-two">
 <a class="skip-link" href="#main">Skip to content</a>
-<div class="v2-utility"><div class="v2-container"><span class="v2-preview">Design preview 02 <span aria-hidden="true">/</span> <a href="/compare/" target="_top">Compare designs</a></span><div><a href="tel:01516513777" class="v2-phone">Support: 0151 651 3777</a><a class="v2-exit" href="https://www.google.co.uk/" aria-label="Quick exit: leave this website">Quick exit <span aria-hidden="true">↗</span></a></div></div></div>
+<div class="v2-utility"><div class="v2-container"><span class="v2-preview">Design preview 02 <span aria-hidden="true">/</span> <a href={sitePath('/compare/')} target="_top">Compare designs</a></span><div><a href="tel:01516513777" class="v2-phone">Support: 0151 651 3777</a><a class="v2-exit" href="https://www.google.co.uk/" aria-label="Quick exit: leave this website">Quick exit <span aria-hidden="true">↗</span></a></div></div></div>
 <header class="v2-header"><div class="v2-container v2-header-inner">
-  <a class="v2-brand" href={base+'/'} aria-label="Paul Lavelle Foundation home"><span class="v2-brand-mark"><Photo name="logo" alt="" eager sizes="64px"/></span><span>PAUL LAVELLE<small>FOUNDATION</small></span></a>
-  <nav class="v2-nav" id="v2-nav" aria-label="Main navigation">{nav.map(([label,href])=><a href={base+href} aria-current={current===base+href?'page':undefined}>{label}</a>)}<a class="v2-support" href={base+'/get-support/'}>Get support <span aria-hidden="true">↗</span></a><a class="v2-button v2-button-yellow v2-nav-donate" href={base+'/donate/'}>Donate <Arrow/></a></nav>
+  <a class="v2-brand" href={sitePath(base+'/')} aria-label="Paul Lavelle Foundation home"><span class="v2-brand-mark"><Photo name="logo" alt="" eager sizes="64px"/></span><span>PAUL LAVELLE<small>FOUNDATION</small></span></a>
+  <nav class="v2-nav" id="v2-nav" aria-label="Main navigation">{nav.map(([label,href])=><a href={sitePath(base+href)} aria-current={current===base+href?'page':undefined}>{label}</a>)}<a class="v2-support" href={sitePath(base+'/get-support/')}>Get support <span aria-hidden="true">↗</span></a><a class="v2-button v2-button-yellow v2-nav-donate" href={sitePath(base+'/donate/')}>Donate <Arrow/></a></nav>
   <button class="v2-menu" aria-label="Open navigation" aria-controls="v2-nav" aria-expanded="false"><span>Menu</span><span class="v2-menu-lines" aria-hidden="true"></span></button>
 </div></header>
 <main id="main" tabindex="-1"><slot/></main>
 <footer class="v2-footer"><div class="v2-container">
-  <div class="v2-footer-top"><div><p class="v2-kicker">In Paul’s memory. For our community.</p><p class="v2-footer-statement">We’re stronger<br/><span>together.</span></p><a class="v2-button v2-button-yellow" href={base+'/join-us/'}>Be part of it <Arrow/></a></div><div class="v2-footer-links"><div><h2>Explore</h2>{nav.map(([label,href])=><a href={base+href}>{label}</a>)}<a href={base+'/news/'}>News & stories</a><a href={base+'/healthy-relationships-healthy-you/'}>Our app</a></div><div><h2>Here to help</h2><a href={base+'/get-support/'}>Get support</a><a href={base+'/referral-forms/self-referral/'}>Self-referral</a><a href={base+'/agency-referral/'}>Professional referrals</a><a href={base+'/resources/'}>Policies & resources</a><a href={base+'/get-in-touch/'}>Contact & opening hours</a><a href={base+'/donate/#fundraise'}>Fundraise with us</a></div></div></div>
+  <div class="v2-footer-top"><div><p class="v2-kicker">In Paul’s memory. For our community.</p><p class="v2-footer-statement">We’re stronger<br/><span>together.</span></p><a class="v2-button v2-button-yellow" href={sitePath(base+'/join-us/')}>Be part of it <Arrow/></a></div><div class="v2-footer-links"><div><h2>Explore</h2>{nav.map(([label,href])=><a href={sitePath(base+href)}>{label}</a>)}<a href={sitePath(base+'/news/')}>News & stories</a><a href={sitePath(base+'/healthy-relationships-healthy-you/')}>Our app</a></div><div><h2>Here to help</h2><a href={sitePath(base+'/get-support/')}>Get support</a><a href={sitePath(base+'/referral-forms/self-referral/')}>Self-referral</a><a href={sitePath(base+'/agency-referral/')}>Professional referrals</a><a href={sitePath(base+'/resources/')}>Policies & resources</a><a href={sitePath(base+'/get-in-touch/')}>Contact & opening hours</a><a href={sitePath(base+'/donate/#fundraise')}>Fundraise with us</a></div></div></div>
   <div class="v2-footer-contact"><a href="tel:01516513777"><small>Support line · not a crisis line</small>0151 651 3777</a><a href="tel:01512944176"><small>General enquiries</small>0151 294 4176</a><a href="mailto:info@paullavellefoundation.co.uk"><small>Say hello</small>Email the foundation <span aria-hidden="true">↗</span></a></div>
-  <div class="v2-footer-bottom"><span>© {new Date().getFullYear()} Paul Lavelle Foundation</span><div><a href={base+'/privacy-policy/'}>Privacy</a><a href={base+'/cookie-policy-uk/'}>Cookies</a><a href="/compare/" target="_top">Compare designs</a><a href={base+'/resources/#preview'}>About this preview</a></div><span>Content snapshot · 8 October 2026</span></div>
+  <div class="v2-footer-bottom"><span>© {new Date().getFullYear()} Paul Lavelle Foundation</span><div><a href={sitePath(base+'/privacy-policy/')}>Privacy</a><a href={sitePath(base+'/cookie-policy-uk/')}>Cookies</a><a href={sitePath('/compare/')} target="_top">Compare designs</a><a href={sitePath(base+'/resources/#preview')}>About this preview</a></div><span>Content snapshot · 8 October 2026</span></div>
 </div></footer>
 <script>
 const menu=document.querySelector<HTMLButtonElement>('.v2-menu');
