@@ -1,0 +1,89 @@
+---
+import {sitePath} from '../utils/paths';
+import '@fontsource-variable/manrope';
+import '../styles/compare.css';
+import Photo from '../components/Photo.astro';
+const demos=[
+  {number:'01',name:'Quiet & minimal',href:'/',description:'Open layouts, restrained typography and a simple editorial feel.'},
+  {number:'02',name:'Bold & photographic',href:'/demo-2/',description:'Larger photographs, expressive typography and interactive sections.'},
+];
+---
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="robots" content="noindex, nofollow"/>
+  <meta name="description" content="Compare two Paul Lavelle Foundation website design previews side by side."/>
+  <meta name="theme-color" content="#092d4b"/>
+  <title>Compare the designs | Paul Lavelle Foundation</title>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="compare-header">
+  <a class="compare-brand" href={sitePath('/')}><span class="compare-mark"><Photo name="logo" alt="" eager sizes="48px"/></span><span>Paul Lavelle Foundation<small>Design comparison</small></span></a>
+  <a class="quick-exit" href="https://www.google.co.uk/" target="_top" aria-label="Quick exit: leave this website">Quick exit <span aria-hidden="true">↗</span></a>
+</header>
+<main id="main" tabindex="-1">
+  <section class="compare-intro" aria-labelledby="compare-title">
+    <div><p class="eyebrow">Two website directions</p><h1 id="compare-title">One foundation.<br/><span>Two ways to tell its story.</span></h1><p>Explore both designs side by side, or open either at full size.</p></div>
+    <div class="compare-controls" hidden>
+      <div role="group" aria-label="Preview screen size"><button type="button" data-device="desktop" aria-pressed="true">Desktop</button><button type="button" data-device="mobile" aria-pressed="false">Mobile</button></div>
+      <p data-device-status aria-live="polite">Desktop previews</p>
+    </div>
+  </section>
+  <div class="compare-grid">
+    {demos.map(demo=><section class="demo-card" aria-labelledby={'demo-title-'+demo.number}>
+      <div class="demo-card-header"><div><p class="eyebrow">Demo {demo.number}</p><h2 id={'demo-title-'+demo.number}>{demo.name}</h2></div><a href={sitePath(demo.href)} target="_blank" rel="noopener" aria-label={'Open Demo '+Number(demo.number)+' at full size in a new tab'}>Open full size <span aria-hidden="true">↗</span></a></div>
+      <p class="demo-description">{demo.description}</p>
+      <div class="preview-viewport"><iframe src={sitePath(demo.href)} title={'Demo '+Number(demo.number)+' interactive website preview'}></iframe></div>
+    </section>)}
+  </div>
+  <p class="compare-help">Scroll and use the links inside each preview. External services open in a new tab. Quick Exit leaves the whole comparison page.</p>
+  <noscript><p class="compare-help">The previews use the available screen width. Open a design at full size to review its desktop layout.</p></noscript>
+</main>
+<footer>Frontend previews · Original PLF photographs and published information · Content snapshot 8 October 2026</footer>
+<script>
+const controls=document.querySelector<HTMLElement>('.compare-controls');
+const buttons=Array.from(document.querySelectorAll<HTMLButtonElement>('[data-device]'));
+const stages=Array.from(document.querySelectorAll<HTMLElement>('.preview-viewport'));
+const status=document.querySelector('[data-device-status]');
+let device='desktop';
+function sizePreviews(){
+  const width=device==='mobile'?390:1280;
+  const height=device==='mobile'?844:1000;
+  for(const stage of stages){
+    const scale=Math.min(stage.clientWidth/width,1);
+    stage.style.setProperty('--preview-width',`${width}px`);
+    stage.style.setProperty('--preview-height',`${height}px`);
+    stage.style.setProperty('--preview-scale',String(scale));
+    stage.style.height=`${height*scale}px`;
+  }
+}
+buttons.forEach(button=>button.addEventListener('click',()=>{
+  device=button.dataset.device||'desktop';
+  buttons.forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
+  if(status)status.textContent=device==='mobile'?'Mobile previews':'Desktop previews';
+  sizePreviews();
+}));
+if('ResizeObserver' in window){
+  controls!.hidden=false;
+  const observer=new ResizeObserver(sizePreviews);
+  stages.forEach(stage=>observer.observe(stage));
+  sizePreviews();
+}
+// Keep third-party services out of the embedded previews and make every exit leave the comparison.
+document.querySelectorAll<HTMLIFrameElement>('iframe').forEach(frame=>{
+  function prepareLinks(){
+    frame.contentDocument?.querySelectorAll<HTMLAnchorElement>('a[href]').forEach(link=>{
+      const destination=new URL(link.href);
+      if(link.matches('.quick-exit,.v2-exit')||destination.origin===location.origin&&destination.pathname.endsWith('/compare/'))link.target='_top';
+      else if(['http:','https:'].includes(destination.protocol)&&destination.origin!==location.origin){link.target='_blank';link.rel='noopener noreferrer';}
+    });
+  }
+  frame.addEventListener('load',prepareLinks);
+  prepareLinks();
+});
+</script>
+</body>
+</html>

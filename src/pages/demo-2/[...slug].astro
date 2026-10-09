@@ -1,7 +1,7 @@
 ---
-import ContentPage from '../components/ContentPage.astro';
-import { getDemoPages } from '../data/pages';
+import ContentPage from '../../components/ContentPage.astro';
+import { getDemoPages } from '../../data/pages';
 export function getStaticPaths(){return getDemoPages().map(page=>({params:{slug:page.route.replace(/^\/|\/$/g,'')},props:{page}}));}
 const {page}=Astro.props;
 ---
-<ContentPage page={page}/>
+<ContentPage page={page} version={2}/>

@@ -1,0 +1,54 @@
+---
+import {sitePath} from '../../utils/paths';
+import Layout from '../../layouts/Demo2Layout.astro';
+import Photo from '../../components/Photo.astro';
+import Arrow from '../../components/Arrow.astro';
+import SourceDetails from '../../components/SourceDetails.astro';
+import ActivityExplorer from '../../components/ActivityExplorer.astro';
+import CommunityGallery from '../../components/CommunityGallery.astro';
+import content from '../../data/content.json';
+const home=content.find(page=>page.route==='/')!;
+const base='/demo-2';
+---
+<Layout title="Stronger, together">
+<section class="v2-hero" aria-labelledby="hero-title">
+  <div class="v2-hero-image"><Photo name="hero" alt="The PLF LEJOG cycling team in blue and yellow jerseys at Claire House" eager sizes="(max-width: 760px) 100vw, 70vw"/></div>
+  <div class="v2-hero-shade"></div>
+  <div class="v2-hero-copy"><p class="v2-kicker"><span class="v2-dot" aria-hidden="true"></span> In Paul’s memory. For our community.</p><h1 id="hero-title">Stronger.<br/><span>Together.</span></h1><p>Support for men affected by domestic abuse.<br class="v2-desktop-break"/> Healthier relationships. A community that cares.</p><div class="v2-actions"><a class="v2-button v2-button-yellow" href={sitePath(base+'/donate/')}>Donate today <Arrow/></a><a class="v2-hero-secondary" href={sitePath(base+'/events/')}>Explore our events <span aria-hidden="true">↗</span></a></div><a class="v2-hero-story" href={sitePath(base+'/our-story/')}><span class="v2-avatar"><Photo name="paul" alt="" sizes="48px"/></span><span>One friend’s memory.<strong>A community’s purpose.</strong></span><span class="v2-round-arrow"><Arrow/></span></a></div>
+  <div class="v2-photo-caption"><span class="v2-small-star" aria-hidden="true">✳</span> Real people. Shared purpose.<small>The PLF community at Claire House</small></div>
+  <a class="v2-scroll-cue" href="#our-purpose" aria-label="Explore our purpose"><span aria-hidden="true">↓</span></a>
+</section>
+<div class="v2-support-strip v2-container"><div><span class="v2-support-icon" aria-hidden="true">↗</span><p><strong>Need someone in your corner?</strong> We’re here to listen.</p></div><a href={sitePath(base+'/get-support/')}>Find support <Arrow/></a></div>
+
+<section class="v2-section v2-container" id="our-purpose">
+  <div class="v2-section-head" data-reveal><p class="v2-kicker">01 / Our purpose</p><h2>Different ways to help.<br/><span>The same belief in people.</span></h2><p>From a conversation that changes your day to the support that helps you move forward. This is what Paul’s legacy makes possible.</p></div>
+  <div class="v2-purpose-grid">
+    <a class="v2-purpose-card v2-card-blue" href={sitePath(base+'/get-support/')} data-reveal><span class="v2-card-index">01 / Support</span><span class="v2-purpose-symbol" aria-hidden="true">↗</span><div><h3>You don’t have to<br/>face it alone.</h3><p>Therapeutic support, advocacy and practical advice for male victims and survivors of domestic abuse.</p><span class="v2-card-action">How we can help <span class="v2-circle"><Arrow/></span></span></div></a>
+    <a class="v2-purpose-card v2-card-cream" href={sitePath(base+'/what-we-do/healthy-relationship-education/')} data-reveal><span class="v2-card-index">02 / Education</span><span class="v2-purpose-symbol v2-sun" aria-hidden="true">✳</span><div><h3>Better relationships.<br/>Brighter futures.</h3><p>Healthy relationship education in schools and workplaces, and the For You Project for young people.</p><span class="v2-card-action">Explore our work <span class="v2-circle"><Arrow/></span></span></div></a>
+    <a class="v2-purpose-card v2-card-photo" href={sitePath(base+'/activity-groups/')} data-reveal><Photo name="swimming" alt="PLF swimmers gathered together on the New Brighton beach"/><span class="v2-card-index">03 / Community</span><div><h3>Fresh air.<br/>Good company.</h3><p>Free activity groups that bring us closer, one shared goal at a time.</p><span class="v2-card-action">Find your people <span class="v2-circle"><Arrow/></span></span></div></a>
+  </div>
+  <div class="v2-inline-links"><a href={sitePath(base+'/lgbtq/')}>LGBTQ+ support <span aria-hidden="true">↗</span></a><a href={sitePath(base+'/what-we-do/fyp-for-you-project/')}>For You Project <span aria-hidden="true">↗</span></a><a href={sitePath(base+'/what-we-do/')}>All our services <span aria-hidden="true">↗</span></a></div>
+</section>
+
+<section class="v2-community-section"><div class="v2-container">
+  <div class="v2-section-head v2-head-inline" data-reveal><div><p class="v2-kicker">02 / Find your people</p><h2>A little movement.<br/><span>A lot of connection.</span></h2></div><p>Come for the activity. Stay for the company. Our free groups welcome both men and women.</p></div>
+  <ActivityExplorer/>
+</div></section>
+
+<section class="v2-section v2-container"><div class="v2-giving" data-reveal>
+  <div class="v2-giving-copy"><p class="v2-kicker">03 / Keep the good going</p><h2>Your kindness.<br/>Someone’s<br/><span>next chapter.</span></h2><p>A donation helps sustain specialist support, healthy relationship education and the activities that connect our community.</p><a class="v2-underlined" href={sitePath(base+'/donate/#fundraise')}>Or turn your own idea into a fundraiser <span aria-hidden="true">↗</span></a></div>
+  <div class="v2-giving-card"><span class="v2-giving-mark" aria-hidden="true">✳</span><p class="v2-kicker">A simple way to make a difference</p><h3>Help us be there.</h3><p>Your gift supports the foundation’s work. Choose a one-off or monthly donation with our existing giving provider.</p><ul><li><span aria-hidden="true">↗</span> Specialist support for men</li><li><span aria-hidden="true">↗</span> Education for healthier relationships</li><li><span aria-hidden="true">↗</span> Community, activity and connection</li></ul><a class="v2-button v2-button-blue" href={sitePath(base+'/donate/')}>Donate to the foundation <Arrow/></a><p class="v2-giving-note">Continue to our giving page, then JustGiving.<br/>Your payment is handled by the provider.</p></div>
+</div></section>
+
+<section class="v2-events-section v2-container" data-reveal>
+  <div class="v2-section-head v2-head-inline"><div><p class="v2-kicker">04 / Make a memory</p><h2>Big challenges.<br/><span>Even better company.</span></h2></div><a class="v2-underlined" href={sitePath(base+'/events/')}>Explore the events archive <Arrow/></a></div>
+  <div class="v2-events-layout"><div class="v2-next-event"><span class="v2-status"><span aria-hidden="true"></span> Looking ahead</span><h3>The next adventure<br/>starts here.</h3><p>There are no upcoming events in this preview. There’s still plenty of community to be part of—start with a regular activity group.</p><a class="v2-button v2-button-blue" href={sitePath(base+'/activity-groups/')}>Find an activity <Arrow/></a><span class="v2-event-decoration" aria-hidden="true">↗</span></div><div class="v2-memory-card"><Photo name="hero" alt="PLF cyclists together at Claire House during the 2019 LEJOG challenge"/><div><span class="v2-memory-label">From the archive · 2019</span><h3>A shared goal.<br/>A lasting memory.</h3><p>Land’s End to John o’ Groats. A challenge shared by the PLF community in Paul’s memory.</p><a class="v2-underlined" href={sitePath(base+'/pauls-memory/lejog-2019-lands-end-to-john-ogroats-926-miles-28-riders-for-claire-house-the-plf/')}>Look back at LEJOG <Arrow/></a></div></div></div>
+</section>
+
+<section class="v2-story-section"><div class="v2-container v2-story-grid"><div class="v2-story-photo" data-reveal><Photo name="paul" alt="Paul Lavelle, whose memory inspired the foundation"/><span>Our friend. Our inspiration.</span></div><div class="v2-story-copy" data-reveal><p class="v2-kicker">05 / The reason we’re here</p><h2>Always Paul.<br/><span>Always people.</span></h2><p class="v2-story-lead">A friend’s memory became a community’s purpose.</p><p>After Paul Lavelle was killed in a domestic abuse incident in May 2017, his family and friends came together to honour his memory and raise awareness of domestic abuse towards men.</p><p>Today, that friendship lives on through support, education and a determination to make life better for others.</p><a class="v2-button v2-button-outline" href={sitePath(base+'/our-story/')}>Read Paul’s story <Arrow/></a></div></div></section>
+
+<section class="v2-section v2-container"><div class="v2-section-head v2-head-inline" data-reveal><div><p class="v2-kicker">Our community, in pictures</p><h2>This is what<br/><span>together looks like.</span></h2></div><p>Real moments from the PLF community.<br/>Select a photograph to take a closer look.</p></div><CommunityGallery/></section>
+
+<section class="v2-faq-section v2-container"><div><p class="v2-kicker">A good place to start</p><h2>A few things<br/><span>you might wonder.</span></h2><a class="v2-underlined" href={sitePath(base+'/get-in-touch/')}>Talk to the team <Arrow/></a></div><div class="v2-faqs"><details><summary>How can I access support?</summary><p>Start with our support information or call 0151 651 3777. PLF supports low to medium risk male victims and survivors of domestic abuse. The support line is not a crisis line.</p><a href={sitePath(base+'/get-support/')}>Explore support and referral options ↗</a></details><details><summary>Can anyone join the activity groups?</summary><p>Both men and women are welcome. Groups are free, and no regular commitment is required. Running has three ability groups; cycling is for riders experienced in rides of 20 miles or more. Contact the organisers about suitability and the next session.</p><a href={sitePath(base+'/activity-groups/')}>Find the right group for you ↗</a></details><details><summary>Can I make a regular donation?</summary><p>The existing JustGiving checkout offers one-off and monthly giving. Choose your gift and giving frequency with the provider. The preview does not take payment details.</p><a href={sitePath(base+'/donate/')}>Go to our giving page ↗</a></details></div></section>
+<section class="v2-source-section v2-container"><SourceDetails page={home} label="The foundation’s full published history and information"/></section>
+</Layout>
